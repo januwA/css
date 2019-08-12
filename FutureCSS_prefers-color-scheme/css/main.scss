@@ -1,0 +1,12 @@
+body {
+  color: var(--color);
+  background-color: var(--background-coloor);
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+
+  h1 {
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  color: var(--color);
+  background-color: var(--background-coloor);
+  height: 100vh;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body h1 {
+  color: var(--text-color);
+}
+/*# sourceMappingURL=main.css.map */
