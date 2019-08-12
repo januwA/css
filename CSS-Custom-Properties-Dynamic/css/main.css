@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.card {
+  background: radial-gradient(circle at var(--x) var(--y), #5de7ff 0%, #0092ec 100%);
+  border-radius: 15px;
+  padding: 1em 2em;
+  width: 40%;
+}
+
+.card h1,
+.card p {
+  pointer-events: none;
+}
+/*# sourceMappingURL=main.css.map */

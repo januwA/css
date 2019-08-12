@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="card" style="--x: 0; --y: 0;">
+      <h1>Testing this</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo officia
+        ducimus placeat facilis optio totam dolor tempora at magni? Eligendi,
+        eius accusamus veniam nesciunt ipsam totam voluptate officia vero fugit!
+      </p>
+    </div>
+    <script>
+      document.querySelector(".card").onmousemove = e => {
+        console.log(e);
+        console.log(e.target.offsetLeft);
+
+        const x = e.pageX - e.target.offsetLeft;
+        const y = e.pageY - e.target.offsetTop;
+        e.target.style.setProperty("--x", `${x}px`);
+        e.target.style.setProperty("--y", `${y}px`);
+      };
+    </script>
+  </body>
+</html>

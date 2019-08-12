@@ -1,0 +1,46 @@
+body {
+  background: #dcf5ff;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  //   justify-items: center;
+  //   align-items: center;
+  place-items: center;
+}
+
+.inner {
+  background: rgb(255, 96, 189);
+  padding: 1em;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(10% at 90% 20%);
+  transition: clip-path 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    clip-path: circle(75%);
+    background-color: rgb(50, 159, 255);
+  }
+
+  span {
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.5s;
+    position: relative;
+    margin-right: 4%;
+    margin-top: 4%;
+  }
+  &:hover span {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  h1 {
+    color: #fff;
+    margin: 0;
+  }
+  p {
+    color: #fff;
+    font-size: 0.8em;
+  }
+}
