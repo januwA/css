@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <svg>
+      <filter id="noise">
+        <!-- 该滤镜利用Perlin噪声函数创建了一个图像。它实现了人造纹理比如说云纹、大理石纹的合成。 -->
+        <feTurbulence
+          baseFrequency="0.02 0.05"
+          result="NOISE"
+          numOctaves="1"
+          id="turbulence"
+        />
+
+        <!-- 映射置换滤镜，该滤镜用来自图像中从in2到空间的像素值置换图像从in到空间的像素值。 -->
+        <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20" />
+      </filter>
+    </svg>
+    <img
+      class="pic"
+      src="https://i.loli.net/2019/10/01/CVBu2tNMqzOfXHr.png"
+      alt=""
+    />
+
+    <script src="https://unpkg.com/gsap@2.1.3/umd/TweenMax.js"></script>
+    <script>
+      let el = document.getElementById('turbulence');
+      tl = new TimelineMax({paused: true});
+      tl.from('.pic', 3, {opacity: 0, x: -50, y: -50}, 0.5);
+      tl.to(
+        el,
+        3,
+        {
+          attr: {
+            baseFrequency: '0 0',
+          },
+        },
+        0.5,
+      );
+      tl.play();
+    </script>
+  </body>
+</html>
