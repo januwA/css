@@ -1,0 +1,75 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+}
+
+svg circle {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper nav {
+  width: 20%;
+  float: right;
+  background-color: #9d5dda;
+  height: calc(100vh - 4em);
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #fff;
+  padding: 2em;
+  -webkit-clip-path: url(#clippath);
+          clip-path: url(#clippath);
+}
+
+.wrapper nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.wrapper nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: .8em 0;
+  font-weight: blob;
+}
+
+.wrapper nav ul p {
+  color: #946be7;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2em;
+}
+
+#open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.5em;
+  font-size: 1.2em;
+  background: none;
+  border: 3px solid purple;
+  padding: 1em;
+  cursor: pointer;
+  outline: none;
+}
+
+#open:hover {
+  background: rgba(0, 0, 0, 0.11);
+}
+/*# sourceMappingURL=main.css.map */

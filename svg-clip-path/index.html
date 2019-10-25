@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>svg clip path</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <svg>
+      <!-- https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/defs -->
+      <defs>
+        <clipPath id="clippath">
+          <circle
+            class="one"
+            cx="200"
+            cy="400"
+            r="1300"
+            transform="scale(0)"
+          ></circle>
+          <circle
+            class="two"
+            cx="-2200"
+            cy="400"
+            r="800"
+            transform="scale(0)"
+          ></circle>
+        </clipPath>
+      </defs>
+    </svg>
+    <button id="open">Open Nav</button>
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><a href="#">Holy</a></li>
+          <li><a href="#">Balls</a></li>
+          <li><a href="#">This</a></li>
+          <li><a href="#">Rocks</a></li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+          voluptate consectetur repellendus impedit vel. Perferendis illo vero
+          illum accusantium eos, fuga accusamus ratione beatae veritatis, neque
+          eveniet iure debitis quos.
+        </p>
+      </nav>
+    </div>
+    <h1>Hello World</h1>
+    <script src="https://unpkg.com/gsap@2.1.3/umd/TweenMax.js"></script>
+    <script>
+      let tl = new TimelineMax({paused: true});
+
+      document.getElementById('open').addEventListener('click', e => {
+        tl.play();
+
+        setTimeout(() => {
+          tl.reverse();
+        }, 2000);
+      });
+
+      // 将当前值[nav]用作目标值
+      // 通过最初的方式设置它们[options]，然后进行补间
+      tl.from('nav', 1, {
+        x: 100,
+        display: 'none',
+        ease: Power2.easeOut,
+        delay: 0,
+      });
+
+      // 为动画指定目标值（从当前值开始）。
+      tl.to(
+        'circle.one',
+        3,
+        {
+          scale: 1,
+          x: 0,
+          y: -1300,
+          ease: Power2.easeOut,
+        },
+        '-=1',
+      );
+
+      tl.to(
+        'circle.two',
+        4,
+        {
+          scale: 1.8,
+          x: 2900,
+          y: -500,
+          ease: Power2.easeOut,
+        },
+        '-=3',
+      );
+
+      tl.from('h1', 1, {
+        opacity: 0,
+        y: 100,
+        // ease: Bounce.easeOut,
+        delay: 0,
+      }, 0.2);
+    </script>
+  </body>
+</html>
