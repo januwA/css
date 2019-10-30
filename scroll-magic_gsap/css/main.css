@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body h1 {
+  text-align: center;
+  margin-top: 30%;
+}
+
+body .sticky {
+  background: #fff !important;
+}
+
+body section {
+  position: relative;
+  padding: 3em;
+  height: 100vh;
+}
+
+body section:nth-child(odd) {
+  background: #f1f1f1;
+}
+
+body section p {
+  position: absolute;
+  font-size: 2em;
+  width: 30%;
+  margin-top: 17%;
+}
+
+body section p span {
+  width: 100%;
+  background: red;
+  display: block;
+  height: 5px;
+  margin-top: 20px;
+}
+
+body section img {
+  position: absolute;
+}
+
+body section img:nth-of-type(1) {
+  width: 40%;
+  right: 0;
+  top: 20%;
+}
+
+body section img:nth-of-type(2) {
+  width: 20%;
+  right: 40%;
+  top: 30%;
+}
+/*# sourceMappingURL=main.css.map */
