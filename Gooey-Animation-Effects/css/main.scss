@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+body {
+  overflow: hidden;
+}
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  filter: contrast(20); // 调整输入图像的对比度, 值越高对比度越大，值越小越接近灰色
+  .box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border-radius: 50%;
+    filter: blur(10px);
+    transition: 2s;
+  }
+}
