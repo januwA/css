@@ -1,0 +1,103 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+section .slider {
+  position: relative;
+  background: #0f0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid #000;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+section .slider:hover {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-box-flex: 2.5;
+      -ms-flex-positive: 2.5;
+          flex-grow: 2.5;
+}
+
+section .slider:last-child {
+  border-right: none;
+}
+
+section .slider:first-child {
+  border-left: none;
+}
+
+section .slider:hover .content {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+section .slider .content {
+  position: absolute;
+  bottom: 0;
+  margin: 40px;
+  padding: 30px;
+  color: #fff;
+  background-color: #000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+section .slider:nth-child(1) {
+  background: url("https://i.loli.net/2019/12/25/gFXmSqETHQU7zdP.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section .slider:nth-child(2) {
+  background: url("https://i.loli.net/2020/01/14/w1dcNtf4SECG6yX.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section .slider:nth-child(3) {
+  background: url("https://i.loli.net/2019/11/30/DVJGdj3eNpakXY4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section .slider:nth-child(4) {
+  background: url("https://i.loli.net/2019/11/30/auRxklc9f6TLgdE.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section .slider:nth-child(5) {
+  background: url("https://i.loli.net/2019/09/25/HcA52VuyRNODMW9.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=main.css.map */

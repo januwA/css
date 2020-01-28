@@ -1,0 +1,70 @@
+$imgs: "https://i.loli.net/2019/12/25/gFXmSqETHQU7zdP.jpg",
+  "https://i.loli.net/2020/01/14/w1dcNtf4SECG6yX.jpg",
+  "https://i.loli.net/2019/11/30/DVJGdj3eNpakXY4.jpg",
+  "https://i.loli.net/2019/11/30/auRxklc9f6TLgdE.jpg",
+  "https://i.loli.net/2019/09/25/HcA52VuyRNODMW9.jpg";
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  min-height: 100vh;
+
+  .slider {
+    position: relative;
+    background: #0f0;
+    flex: 1;
+    border: 2px solid #000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      transition-delay: 0.3s;
+      flex-grow: 2.5;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+    &:first-child {
+      border-left: none;
+    }
+
+    // hover时进场动画
+    &:hover .content {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s;
+      transition-delay: 0.8s;
+      transform: translateY(0);
+    }
+    
+    .content {
+      position: absolute;
+      bottom: 0;
+      margin: 40px;
+      padding: 30px;
+      color: #fff;
+      background-color: #000;
+      visibility: hidden;
+      opacity: 0;
+
+      // 由于单独设置了进场动画，所以这里的动画只用于出场
+      transition: 0.2s;
+      transform: translateY(100%);
+    }
+    @each $img in $imgs {
+      $i: index($imgs, $img);
+      &:nth-child(#{$i}) {
+        background: url($img);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}
