@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #ccc;
+}
+
+a {
+  position: relative;
+  display: block;
+  padding: 1.5em;
+  background-color: #fff;
+  -webkit-transform: perspective(1000px) rotate(-10deg) skew(10deg) translate(0, 0);
+          transform: perspective(1000px) rotate(-10deg) skew(10deg) translate(0, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: -20px 20px 13px rgba(0, 0, 0, 0.4);
+          box-shadow: -20px 20px 13px rgba(0, 0, 0, 0.4);
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background-color: #dedede;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg) skewY(-45deg);
+          transform: rotate(0deg) skewY(-45deg);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background-color: #bbbbbb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg) skewX(-45deg);
+          transform: rotate(0deg) skewX(-45deg);
+}
+
+a:hover {
+  -webkit-transform: perspective(1000px) rotate(-10deg) skew(10deg) translate(20px, -15px);
+          transform: perspective(1000px) rotate(-10deg) skew(10deg) translate(20px, -15px);
+  -webkit-box-shadow: -50px 50px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: -50px 50px 20px rgba(0, 0, 0, 0.4);
+  background-color: #e24660;
+}
+
+a:hover .material-icons {
+  color: #fff;
+}
+
+a:hover::before {
+  background-color: #d81636;
+}
+
+a:hover::after {
+  background-color: #a7384b;
+}
+
+a .material-icons {
+  font-size: 40px;
+  color: #262626;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=main.css.map */
