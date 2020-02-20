@@ -15,3 +15,4 @@ css 练习
 - [svg-filters](https://januwa.github.io/css/svg-filters/index.html) 使用SVG滤镜在某些照片上创建非常酷的效果
 - [CSS-Image-Slider](https://januwa.github.io/css/CSS-Image-Slider/index.html) 使用Flexbox的纯CSS全屏滑块 CSS图像滑块
 - [CSS-3D-Button](https://januwa.github.io/css/CSS-3D-Button/index.html) CSS 3D Button效果
+- [Flat-Long-Text-Shadow](https://januwa.github.io/css/Flat-Long-Text-Shadow/index.html) 扁平长文本阴影
