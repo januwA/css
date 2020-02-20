@@ -16,3 +16,4 @@ css 练习
 - [CSS-Image-Slider](https://januwa.github.io/css/CSS-Image-Slider/index.html) 使用Flexbox的纯CSS全屏滑块 CSS图像滑块
 - [CSS-3D-Button](https://januwa.github.io/css/CSS-3D-Button/index.html) CSS 3D Button效果
 - [Flat-Long-Text-Shadow](https://januwa.github.io/css/Flat-Long-Text-Shadow/index.html) 扁平长文本阴影
+- [CSS-Glowing-Light-Custom-Checkbox](https://januwa.github.io/css/CSS-Glowing-Light-Custom-Checkbox/index.html) CSS发光指示灯自定义复选框

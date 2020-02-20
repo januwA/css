@@ -1,0 +1,125 @@
+$body-bg-color: #191919;
+$check-bg-color: #101010;
+$check-border-radius: 40px;
+
+@function box-shadow($color) {
+  @return 0 0 5px $color, 0 0 10px $color, 0 0 20px $color, 0 0 40px $color,
+    0 0 80px $color;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $body-bg-color;
+
+  label {
+    position: relative;
+    width: 240px;
+    height: 80px;
+    cursor: pointer;
+    margin: 20px 0;
+
+    input {
+      opacity: 0;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background-color: $check-bg-color;
+      border-radius: $check-border-radius;
+      box-shadow: 0 0 0 4px $check-bg-color;
+
+      &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 4px);
+        left: -30px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #f00;
+        transition: 0.5s;
+        box-shadow: box-shadow(#f00);
+      }
+
+      &::after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 4px);
+        right: -30px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $check-bg-color;
+        transition: 0.5s;
+      }
+    }
+
+    input:checked ~ .check::before {
+      background-color: $check-bg-color;
+      box-shadow: none;
+    }
+    input:checked ~ .check::after {
+      background-color: #0f0;
+      box-shadow: box-shadow(#0f0);
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: $check-border-radius;
+      background-color: #333;
+      transition: 0.5s;
+
+      // 设置内阴影
+      box-shadow: inset 0 -20px 15px #292929, inset 0 20px 15px #292929;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #252525;
+        border-top-left-radius: $check-border-radius;
+        border-bottom-left-radius: $check-border-radius;
+        filter: blur(2px);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #252525;
+        border-top-right-radius: $check-border-radius;
+        border-bottom-right-radius: $check-border-radius;
+        filter: blur(2px);
+      }
+    }
+    input:checked ~ .btn {
+      left: 50%;
+    }
+  }
+}
