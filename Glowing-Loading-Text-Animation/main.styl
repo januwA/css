@@ -1,0 +1,43 @@
+text-shadow-item(a)
+  // 字符串插值
+  // '0 0 %s #ff45c6' % a;
+  s('0 0 %s #ff45c6', a);
+
+html, body
+  padding: 0;
+  margin: 0;
+
+body
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #000;
+
+  h2
+    color: rgba(0, 0, 0, 0);
+    font-size: 6em;
+    display: flex;
+
+    span
+      animation: anime 4s linear infinite;
+
+      for row in (1 .. 8)
+        &:nth-child({row})
+          animation-delay: (row / 10 - 0.1) s;
+
+@keyframes anime
+  0%, 100%
+    color: #fff;
+    filter: blur(2px);
+    shadows = ();
+
+    for e, i in 10 20 40 80 120 200 300 400
+      // shadows[i] = text-shadow-item(e px);
+      shadows[i] = '0 0 %s #ff45c6' % (e px);
+
+    text-shadow: unquote(join(',', shadows));
+
+  25%, 75%
+    color: rgba(0, 0, 0, 0);
+    filter: blur(0px);
+    text-shadow: none;

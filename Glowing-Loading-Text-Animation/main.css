@@ -1,0 +1,91 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+body h2 {
+  color: rgba(0,0,0,0);
+  font-size: 6em;
+  display: flex;
+}
+body h2 span {
+  animation: anime 4s linear infinite;
+}
+body h2 span:nth-child(1) {
+  animation-delay: 0s;
+}
+body h2 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+body h2 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+body h2 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+body h2 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+body h2 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+body h2 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+body h2 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+@-moz-keyframes anime {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff45c6,0 0 20px #ff45c6,0 0 40px #ff45c6,0 0 80px #ff45c6,0 0 120px #ff45c6,0 0 200px #ff45c6,0 0 300px #ff45c6,0 0 400px #ff45c6;
+  }
+  25%, 75% {
+    color: rgba(0,0,0,0);
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}
+@-webkit-keyframes anime {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff45c6,0 0 20px #ff45c6,0 0 40px #ff45c6,0 0 80px #ff45c6,0 0 120px #ff45c6,0 0 200px #ff45c6,0 0 300px #ff45c6,0 0 400px #ff45c6;
+  }
+  25%, 75% {
+    color: rgba(0,0,0,0);
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}
+@-o-keyframes anime {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff45c6,0 0 20px #ff45c6,0 0 40px #ff45c6,0 0 80px #ff45c6,0 0 120px #ff45c6,0 0 200px #ff45c6,0 0 300px #ff45c6,0 0 400px #ff45c6;
+  }
+  25%, 75% {
+    color: rgba(0,0,0,0);
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}
+@keyframes anime {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #ff45c6,0 0 20px #ff45c6,0 0 40px #ff45c6,0 0 80px #ff45c6,0 0 120px #ff45c6,0 0 200px #ff45c6,0 0 300px #ff45c6,0 0 400px #ff45c6;
+  }
+  25%, 75% {
+    color: rgba(0,0,0,0);
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}
