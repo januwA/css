@@ -1,0 +1,29 @@
+html, body
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  height: 100vh;
+
+  span
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('./heart.png');
+    background-size: cover;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: anime 2s linear infinite;
+
+@keyframes anime
+  0%
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    // https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter#hue-rotate
+    filter: hue-rotate(0deg);
+
+  100%
+    transform: translate(-50%, -1500%);
+    opacity: 0;
+    filter: hue-rotate(360deg*2);

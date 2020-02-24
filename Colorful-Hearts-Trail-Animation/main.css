@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  height: 100vh;
+}
+html span,
+body span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("./heart.png");
+  background-size: cover;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: anime 2s linear infinite;
+}
+@-moz-keyframes anime {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1500%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+@-webkit-keyframes anime {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1500%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+@-o-keyframes anime {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1500%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+@keyframes anime {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1500%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}

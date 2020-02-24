@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful-Hearts-Trail-Animation</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+      const f = throttle(e => {
+        const heart = document.createElement("span");
+        const x = e.offsetX;
+        const y = e.offsetY;
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+
+        const size = Math.random() * 100;
+        heart.style.width = size + "px";
+        heart.style.height = size + "px";
+        body.append(heart);
+        setTimeout(() => {
+          heart.remove();
+        }, 1800);
+      });
+      document.addEventListener("mousemove", f);
+
+      function throttle(fn, rate = 20) {
+        let lastClick = Date.now() - rate;
+        return function(...args) {
+          if (Date.now() - lastClick >= rate) {
+            fn(...args);
+            lastClick = Date.now();
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
