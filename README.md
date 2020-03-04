@@ -19,3 +19,4 @@ css 练习
 - [CSS-Glowing-Light-Custom-Checkbox](https://januwa.github.io/css/CSS-Glowing-Light-Custom-Checkbox/index.html) CSS发光指示灯自定义复选框
 - [Glowing-Loading-Text-Animation](https://januwa.github.io/css/Glowing-Loading-Text-Animation/index.html) CSS发光加载文本动画效果
 - [Colorful-Hearts-Trail-Animation](https://januwa.github.io/css/Colorful-Hearts-Trail-Animation/index.html) 多彩之心小径动画
+- [Animated-Responsive-Navbar](https://januwa.github.io/css/Animated-Responsive-Navbar/index.html) 带有CSS的动画自适应导航栏

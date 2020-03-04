@@ -1,0 +1,122 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+.navbar {
+  position: fixed;
+  background-color: #23232e;
+  transition: width 0.2s ease;
+}
+.navbar .navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.navbar .navbar-nav .item,
+.navbar .navbar-nav .logo {
+  width: 100%;
+}
+.navbar .navbar-nav .item:last-child,
+.navbar .navbar-nav .logo:last-child {
+  margin-top: auto;
+}
+.navbar .navbar-nav .item .link,
+.navbar .navbar-nav .logo .link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 0.2s;
+}
+.navbar .navbar-nav .item .link:hover,
+.navbar .navbar-nav .logo .link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #23232e;
+  color: #ececec;
+}
+.navbar .navbar-nav .item .link .text,
+.navbar .navbar-nav .logo .link .text {
+  display: none;
+}
+.navbar .navbar-nav .item .link .material-icons,
+.navbar .navbar-nav .logo .link .material-icons {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  color: #ff7eee;
+}
+.navbar .navbar-nav .logo {
+  font-weight: blob;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  text-decoration: none;
+}
+.navbar .navbar-nav .logo .material-icons {
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+.navbar:hover .logo .material-icons {
+  transform: rotate(-180deg);
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+  }
+  .navbar .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar .navbar-nav .link {
+    justify-content: center;
+  }
+  .logo {
+    display: none;
+  }
+  main {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+  .navbar:hover .item .link .text {
+    display: block;
+  }
+  .navbar:hover .logo .link .text {
+    display: block;
+  }
+  .navbar:hover {
+    width: 16rem;
+  }
+}
