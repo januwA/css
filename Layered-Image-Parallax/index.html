@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="lauer"
+        data-speed="40"
+        src="https://i.loli.net/2019/12/22/UOCmgeYS5pyWsHD.png"
+        alt=""
+      />
+      <img
+        class="lauer"
+        data-speed="30"
+        src="https://i.loli.net/2019/12/22/UOCmgeYS5pyWsHD.png"
+        alt=""
+      />
+      <img
+        class="lauer"
+        data-speed="20"
+        src="https://i.loli.net/2019/12/22/UOCmgeYS5pyWsHD.png"
+        alt=""
+      />
+      <img
+        class="lauer"
+        data-speed="10"
+        src="https://i.loli.net/2019/12/22/UOCmgeYS5pyWsHD.png"
+        alt=""
+      />
+    </div>
+    <script>
+      const layers = document.querySelectorAll(".lauer");
+      document.addEventListener("mousemove", e => {
+        layers.forEach(l => {
+          const speed = l.getAttribute("data-speed");
+          let x = (window.innerWidth - e.pageX * speed) / 250;
+          let y = (window.innerWidth - e.pageX * speed) / 300;
+          l.style.transform = `translate(${-x}px, ${y}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
