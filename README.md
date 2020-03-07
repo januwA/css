@@ -22,3 +22,4 @@ css 练习
 - [Animated-Responsive-Navbar](https://januwa.github.io/css/Animated-Responsive-Navbar/index.html) 带有CSS的动画自适应导航栏
 - [CSS-Button-Hover-Effects](https://januwa.github.io/css/CSS-Button-Hover-Effects/index.html) hover 按钮特效
 - [Layered-Image-Parallax](https://januwa.github.io/css/Layered-Image-Parallax/index.html) 分层图像视差
+- [Working-Analog-Clock](https://januwa.github.io/css/Working-Analog-Clock/index.html) 工作模拟时钟
