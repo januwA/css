@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>页面滚动进度栏</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+      <h2>页面滚动进度栏</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        perferendis consectetur consequatur fugit nam facere praesentium
+        inventore dolorem aspernatur quam illum, magnam quaerat veritatis.
+        Dignissimos numquam laudantium nostrum a expedita! Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Explicabo perferendis consectetur
+        consequatur fugit nam facere praesentium inventore dolorem aspernatur
+        quam illum, magnam quaerat veritatis. Dignissimos numquam laudantium
+        nostrum a expedita! Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Explicabo perferendis consectetur consequatur fugit nam facere
+        praesentium inventore dolorem aspernatur quam illum, magnam quaerat
+        veritatis. Dignissimos numquam laudantium nostrum a expedita! Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis
+        consectetur consequatur fugit nam facere praesentium inventore dolorem
+        aspernatur quam illum, magnam quaerat veritatis. Dignissimos numquam
+        laudantium nostrum a expedita! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Explicabo perferendis consectetur consequatur fugit
+        nam facere praesentium inventore dolorem aspernatur quam illum, magnam
+        quaerat veritatis. Dignissimos numquam laudantium nostrum a expedita!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        perferendis consectetur consequatur fugit nam facere praesentium
+        inventore dolorem aspernatur quam illum, magnam quaerat veritatis.
+        Dignissimos numquam laudantium nostrum a expedita! Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Explicabo perferendis consectetur
+        consequatur fugit nam facere praesentium inventore dolorem aspernatur
+        quam illum, magnam quaerat veritatis. Dignissimos numquam laudantium
+        nostrum a expedita! Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Explicabo perferendis consectetur consequatur fugit nam facere
+        praesentium inventore dolorem aspernatur quam illum, magnam quaerat
+        veritatis. Dignissimos numquam laudantium nostrum a expedita! Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis
+        consectetur consequatur fugit nam facere praesentium inventore dolorem
+        aspernatur quam illum, magnam quaerat veritatis. Dignissimos numquam
+        laudantium nostrum a expedita! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Explicabo perferendis consectetur consequatur fugit
+        nam facere praesentium inventore dolorem aspernatur quam illum, magnam
+        quaerat veritatis. Dignissimos numquam laudantium nostrum a expedita!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        perferendis consectetur consequatur fugit nam facere praesentium
+        inventore dolorem aspernatur quam illum, magnam quaerat veritatis.
+        Dignissimos numquam laudantium nostrum a expedita! Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Explicabo perferendis consectetur
+        consequatur fugit nam facere praesentium inventore dolorem aspernatur
+        quam illum, magnam quaerat veritatis. Dignissimos numquam laudantium
+        nostrum a expedita! Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Explicabo perferendis consectetur consequatur fugit nam facere
+        praesentium inventore dolorem aspernatur quam illum, magnam quaerat
+        veritatis. Dignissimos numquam laudantium nostrum a expedita! Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis
+        consectetur consequatur fugit nam facere praesentium inventore dolorem
+        aspernatur quam illum, magnam quaerat veritatis. Dignissimos numquam
+        laudantium nostrum a expedita! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Explicabo perferendis consectetur consequatur fugit
+        nam facere praesentium inventore dolorem aspernatur quam illum, magnam
+        quaerat veritatis. Dignissimos numquam laudantium nostrum a expedita!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        perferendis consectetur consequatur fugit nam facere praesentium
+        inventore dolorem aspernatur quam illum, magnam quaerat veritatis.
+        Dignissimos numquam laudantium nostrum a expedita! Lorem, ipsum dolor
+        sit amet consectetur adipisicing elit. Explicabo perferendis consectetur
+        consequatur fugit nam facere praesentium inventore dolorem aspernatur
+        quam illum, magnam quaerat veritatis. Dignissimos numquam laudantium
+        nostrum a expedita! Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Explicabo perferendis consectetur consequatur fugit nam facere
+        praesentium inventore dolorem aspernatur quam illum, magnam quaerat
+        veritatis. Dignissimos numquam laudantium nostrum a expedita! Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis
+        consectetur consequatur fugit nam facere praesentium inventore dolorem
+        aspernatur quam illum, magnam quaerat veritatis. Dignissimos numquam
+        laudantium nostrum a expedita! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Explicabo perferendis consectetur consequatur fugit
+        nam facere praesentium inventore dolorem aspernatur quam illum, magnam
+        quaerat veritatis. Dignissimos numquam laudantium nostrum a expedita!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        perferendis consectetur consequatur fugit nam facere praesentium
+        inventore dolorem aspernatur quam illum, magnam quaerat veritatis.
+        Dignissimos numquam laudantium nostrum a expedita!
+      </p>
+    </section>
+    <script>
+      const progress = document.querySelector("#progressbar");
+
+      // body整个高度 - 窗口可视高度
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+      window.addEventListener("scroll", update);
+      window.addEventListener("resize", () => {
+        totalHeight = document.body.scrollHeight - window.innerHeight;
+        update();
+      });
+
+      function update() {
+        // 滚动距离 / totalHeight * 100
+        const progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
+  </body>
+</html>
