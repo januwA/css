@@ -1,0 +1,31 @@
+*
+  margin: 0;
+  padding: 0;
+
+body
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #f1f1f1;
+
+#text
+  user-select: none
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12em;
+  text-align: center;
+  letter-spacing: 2px;
+  transform: rotate(-20deg) skew(25deg);
+
+  &:before
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: none
+    filter: blur(8px)
+    z-index: -1
