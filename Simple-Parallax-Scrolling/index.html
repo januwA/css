@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section>
+      <img src="./assets/bg.jpg" id="bg" />
+      <img src="./assets/moon.png" id="moon" />
+      <img src="./assets/mountain.png" id="mountain" />
+      <img src="./assets/road.png" id="road" />
+      <h1 id="text">Moon Light</h1>
+    </section>
+    <div style="margin-top: 110vh;"></div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora dolore
+      amet hic deserunt eligendi doloribus iusto rerum sed cupiditate ullam
+      dolores, porro autem? Eius doloremque ex amet, quidem labore nisi.
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora dolore
+      amet hic deserunt eligendi doloribus iusto rerum sed cupiditate ullam
+      dolores, porro autem? Eius doloremque ex amet, quidem labore nisi.
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora dolore
+      amet hic deserunt eligendi doloribus iusto rerum sed cupiditate ullam
+      dolores, porro autem? Eius doloremque ex amet, quidem labore nisi.
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora dolore
+      amet hic deserunt eligendi doloribus iusto rerum sed cupiditate ullam
+      dolores, porro autem? Eius doloremque ex amet, quidem labore nisi.
+    </p>
+    <script>
+      const [bg, moon, mountain, road, text] = [
+        "bg",
+        "moon",
+        "mountain",
+        "road",
+        "text",
+      ].map((id) => document.getElementById(id));
+
+      window.addEventListener("scroll", (e) => {
+        const value = window.scrollY;
+        bg.style.top = value * 0.5 + "px";
+        moon.style.left = -value * 0.5 + "px";
+        mountain.style.top = -value * 0.2 + "px";
+        road.style.top = value * 0.1 + "px";
+        text.style.top = value * 1 + "px";
+      });
+    </script>
+  </body>
+</html>
