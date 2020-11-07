@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+      }
+      /* ============================== */
+      .checkbox {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+      }
+      .checkbox > .label > input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        cursor: inherit;
+        height: 100%;
+        opacity: 0;
+      }
+
+      .checkbox > .label {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 2px solid rgba(0, 0, 0, 0.54);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .checkbox > .label.checked {
+        background-color: #1976d2;
+        border-color: #1976d2;
+      }
+
+      .checkbox > .label > .icon {
+        visibility: hidden;
+      }
+
+      .checkbox > .label > .icon.checked {
+        color: #fff;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="checkbox">
+      <span class="label">
+        <input type="checkbox" />
+        <i class="icon material-icons">done</i>
+      </span>
+    </div>
+    <br>
+    <div>
+      <div class="checkbox">
+        <span class="label">
+          <input type="checkbox" />
+          <i class="icon material-icons">done</i>
+        </span>
+      </div>
+      <div class="checkbox">
+        <span class="label">
+          <input type="checkbox" />
+          <i class="icon material-icons">done</i>
+        </span>
+      </div>
+      <div class="checkbox">
+        <span class="label">
+          <input type="checkbox" />
+          <i class="icon material-icons">done</i>
+        </span>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".checkbox").forEach((c) => {
+        const label = c.querySelector(".label");
+        const icon = c.querySelector(".icon");
+        c.querySelector("input[type=checkbox]").addEventListener(
+          "change",
+          (e) => {
+            if (e.target.checked) {
+              label.classList.add("checked");
+              icon.classList.add("checked");
+            } else {
+              label.classList.remove("checked");
+              icon.classList.remove("checked");
+            }
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
